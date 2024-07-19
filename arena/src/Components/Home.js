@@ -1,7 +1,7 @@
 import React from "react";
 import '../Styles/arena.css';
 
-const Arenas = () => {
+const Home = () => {
     return(
         <div>
             <p>My Gaming  Platform - Sharp</p>
@@ -9,4 +9,4 @@ const Arenas = () => {
     );
 };
 
-export default Arenas;
+export default Home;

@@ -1,13 +1,13 @@
 import React from 'react';
-import Arenas from './Components/Arena';
-
-
+import Home from './Components/Home';
 
 
 function App() {
-  <div className="App">
-    <Arenas />
+  return(
+    <div className="App">
+    <Home />
   </div>
-}
+  );
+};
 
 export default App;
