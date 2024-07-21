@@ -12,6 +12,7 @@ const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isSticky, setSticky] = useState(false);
 
+// ----------------------------sticky navbar javascript--------------------------------
 
     useEffect(() => {
         const stickyNav = () => {
@@ -23,6 +24,7 @@ const Home = () => {
         };
     }, []);
 
+// -------------------------------active scroll sections-------------------------------
 
     const sectionIds = ['home'];
 
@@ -48,6 +50,8 @@ const Home = () => {
     }, []);
 
 
+// -------------------------------------Toggle Menu handler---------------------------------
+
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     }
@@ -55,6 +59,8 @@ const Home = () => {
     const closeMenu = () => {
         setIsOpen(false);
     }
+
+    // ----------------------------------content reveal animation---------------------------
 
     useEffect(() => {
 
@@ -79,13 +85,6 @@ const Home = () => {
             setShowContent(true);
         }, 300); // 5.6 seconds in milliseconds
     }, []);
-
-
-
-
-
-
-
 
 
     return (
