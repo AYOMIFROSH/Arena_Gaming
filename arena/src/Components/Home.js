@@ -56,21 +56,40 @@ const Home = () => {
         setIsOpen(false);
     }
 
-    const sr = ScrollReveal ({
-        distance: '65px',
-        duration: 2600,
-        delay: 450,
-        reset: true
-    })
+    useEffect(() => {
 
-    sr.reveal(".hero-text", {delay:200, origin:'top'});
-    sr.reveal(".hero-img", {delay:450, origin:'top'});
+        const sr = ScrollReveal({
+            distance: '65px',
+            duration: 2600,
+            delay: 450,
+            reset: true
+        });
+        sr.reveal("header", { delay: 200, origin: 'top' });
+        sr.reveal(".hero-text", { delay: 200, origin: 'top' });
+        sr.reveal(".hero-img", { delay: 450, origin: 'top' });
+    }, []);
 
-    
+    //------------------------------------paralax---------------------------- //
+
+    const [showContent, setShowContent] = useState(false);
+
+    useEffect(() => {
+        // Add a delay (e.g., 500ms) to allow the preloader to finish
+        setTimeout(() => {
+            setShowContent(true);
+        }, 300); // 5.6 seconds in milliseconds
+    }, []);
+
+
+
+
+
+
+
 
 
     return (
-        <div>
+        <div className={`content ${showContent ? 'fade-in' : ''}`}>
 
 
             <header className={isSticky ? 'sticky' : ''}>
@@ -83,7 +102,7 @@ const Home = () => {
                     <li onClick={closeMenu}><a href="#contact" className={activeSection === 'contact' ? 'active' : ''} style={{ '--i': '7' }}>Contact</a></li>
                     <li onClick={closeMenu} className="cart"><a href="#cart" className={activeSection === 'cart' ? 'active' : ''} style={{ '--i': '4' }}><i class='bx bxs-cart' style={{ fontSize: '23px' }}></i></a></li>
                 </ul>
-                    <div id="menu-icon" className={`bx ${isOpen ? 'bx-x' : 'bx-menu'}`} onClick={toggleMenu}></div>
+                <div id="menu-icon" className={`bx ${isOpen ? 'bx-x' : 'bx-menu'}`} onClick={toggleMenu}></div>
             </header>
 
             {/* ------------------home section------------------- */}
@@ -92,7 +111,7 @@ const Home = () => {
                 <div className="hero-text">
                     <h5>#3 Trending</h5>
                     <h4>Lead Supercell</h4>
-                    <h1>GOBLINS</h1>
+                    <h1>GUNBLADE</h1>
                     <p>Join millions of gamers as they explore gaming tools and feel confident while gaming!.</p>
                     <a href="#">Explore</a>
                     <a href="#" className="ctaa"><i className='bx bx-play'></i>Watch Triller</a>

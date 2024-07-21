@@ -280,6 +280,7 @@
    transition: all .50s ease;
  }
 
+
  .icons i:hover{
    color: var(--energeticgreen);
    transform: translateY(-5px);
@@ -305,6 +306,32 @@
    transform: translateY(-5px)
  }
 
+ /* ---------------------------------MpLoader----------------------- */
+
+   .MpLoad {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+   }
+
+.content {
+   /* Set initial opacity to 0 */
+   opacity: 0;
+   /* Add other styling as needed */
+ }
+ 
+ .fade-in {
+   /* Transition the opacity property */
+   transition: opacity 0.5s ease-in-out;
+   /* Set final opacity to 1 */
+   opacity: 1;
+ }
+ 
 
  /* -----------------------BreakPoint------------------ */
 
