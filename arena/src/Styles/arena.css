@@ -331,7 +331,294 @@
    /* Set final opacity to 1 */
    opacity: 1;
  }
+
+ /* -------------------------explore section-------------------------- */
+
+ .logo-section{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 30px 0;
+ }
+
+ .logo-section h1{
+   width: 250px;
+   font-size: 2rem;
+   color: #bdbdbd;
+   margin-left: 10px;
+   font-family: cursives;
+ }
+
+ .logo-section .fas{
+   font-size: 6rem;
+   color: var(--darkgrey);
+ }
+
+ /* ------------------------------explore section------------------------ */
  
+ .explore{
+   width: 100%;
+   height: 100vh;
+   background: url(../assets/arenaGameBG.png);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+ }
+
+ .wrapper{
+   width: 70%;
+   margin: auto;
+ }
+ 
+ .explore h1{
+   font-size: 1.5rem;
+   color: var(--text-color);
+   font-weight: 450;
+   font-family: cursives;
+ }
+
+ .explore-1-img{
+   display: flex;
+
+ }
+
+ .explore-1-img .img{
+   width: 100px;
+   height: 130px;
+   background: url(../assets/arenaBG2.png);
+   background-size: cover;
+   background-position: center;
+   margin-right: 10px;
+   border-radius: 10px;
+ }
+
+ .explore-1-img .img-2{
+   background: url(../assets/arenaBG4.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .explore-1-img .img-3{
+   background: url(../assets/arenaBG3.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .explore-1-img .img-4{
+   background: url(../assets/arenaBg5.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .explore-1-img .img-5{
+   background: url(../assets/arenaBg6.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .explore-1-img .img-6{
+   background: url(../assets/arenaBg7.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .explore-1-img .img-7{
+   background: url(../assets/arenaBg8.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .explore-1-img .img-8{
+   background: url(../assets/arenaBg9.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .img:hover{
+   transform: translateY(-10px);
+   transition: all .5s ease;
+ }
+
+ /* ------------------------gaming explore categories--------------------- */
+
+ .game-categories{
+   width: 70%;
+   margin: auto;
+   position: relative;
+ }
+
+ .game-categories h1{
+   font-size: 1.5rem;
+   margin: 30px 0;
+   color: #bdbdbd;
+   font-family: cursives;
+ }
+
+ .game-wrapper{
+   display: flex;
+ }
+
+ .gw{
+   width: 120px;
+   height: 120px;
+   background: url(../assets/gw1.png);
+   background-size: cover;
+   background-position: center;
+   margin: 20px 15px 0 0;
+   border-radius: 10px;
+ }
+
+ .gw:hover{
+   transform: translateY(-10px);
+   transition: all .5s ease;
+ }
+
+ .left{
+   position: relative;
+   right: -140px;
+ }
+
+ .gw-1{
+   background: url(../assets/gw1.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .gw-2{
+   background: url(../assets/gw2.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .gw-3{
+   background: url(../assets/gw3.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .gw-4{
+   background: url(../assets/gw4.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .gw-5{
+   background: url(../assets/gw5.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .gw-6{
+   background: url(../assets/gw6.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .gw-7{
+   background: url(../assets/gw7.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .gw-8{
+   background: url(../assets/gw8.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .gw-9{
+   background: url(../assets/gw9.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .gw-10{
+   background: url(../assets/gw10.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ /* --------------------------------explore section2-------------------------- */
+
+ .explore-2{
+   width: 100%;
+   height: 50vh;
+   background: url(../assets/explor2Bg.png);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+ }
+
+ .explore-2 h1{
+   font-size: 2rem;
+   color: #bdbdbd;
+   font-family: cursives;
+ }
+
+ .players{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .p-image{
+   width: 200px;
+   height: 200px;
+   background: url(../assets/valentino.png);
+   background-size: cover;
+   background-position: center;
+   border-radius: 50%;
+   position: relative;
+ }
+
+ .p-image-1::after{
+   content: VS;
+   position: absolute;
+   right: -35px;
+   bottom: 0;
+   font-size: 2rem;
+   color: var(--energeticgreen);
+ }
+
+ .players span{
+   font-size: 1.5rem;
+   color: #bdbdbd;
+   font-weight: bold;
+   margin-bottom: 10px;
+   font-family: cursives;
+ }
+
+ .stars{
+   color: #bdbd;
+ }
+
+ .p-image-2{
+   background: url(../assets/anthony.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .p-image-3{
+   background: url(../assets/tyler.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+ .p-image-4{
+   background: url(../assets/aruna.png);
+   background-size: cover;
+   background-position: center;
+ }
+
+
+
+ 
+
+
+
 
  /* -----------------------BreakPoint------------------ */
 
@@ -492,6 +779,8 @@
    }
    
 }
+
+
 
 
 

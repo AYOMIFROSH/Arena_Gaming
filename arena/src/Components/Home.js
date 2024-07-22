@@ -4,6 +4,7 @@ import '../index.css';
 import pic from '../assets/Logoalts.png';
 import home from '../assets/arenaGraphics.png'
 import ScrollReveal from "scrollreveal";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isSticky, setSticky] = useState(false);
 
-// ----------------------------sticky navbar javascript--------------------------------
+    // ----------------------------sticky navbar javascript--------------------------------
 
     useEffect(() => {
         const stickyNav = () => {
@@ -24,7 +25,7 @@ const Home = () => {
         };
     }, []);
 
-// -------------------------------active scroll sections-------------------------------
+    // -------------------------------active scroll sections-------------------------------
 
     const sectionIds = ['home'];
 
@@ -50,7 +51,7 @@ const Home = () => {
     }, []);
 
 
-// -------------------------------------Toggle Menu handler---------------------------------
+    // -------------------------------------Toggle Menu handler---------------------------------
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -70,7 +71,6 @@ const Home = () => {
             delay: 450,
             reset: true
         });
-        sr.reveal("header", { delay: 200, origin: 'top' });
         sr.reveal(".hero-text", { delay: 200, origin: 'top' });
         sr.reveal(".hero-img", { delay: 450, origin: 'top' });
     }, []);
@@ -97,9 +97,9 @@ const Home = () => {
                     <li onClick={closeMenu}><a href="#home" className={activeSection === 'home' ? 'active' : ''} style={{ '--i': '1' }}>Home</a></li>
                     <li onClick={closeMenu}><a href="#about" className={activeSection === 'about' ? 'active' : ''} style={{ '--i': '2' }}>About</a></li>
                     <li onClick={closeMenu}><a href="#services" className={activeSection === 'services' ? 'active' : ''} style={{ '--i': '3' }}>Services</a></li>
-                    <li onClick={closeMenu}><a href="#testimonies" className={activeSection === 'testimonies' ? 'active' : ''} style={{ '--i': '6' }}>Reviews</a></li>
-                    <li onClick={closeMenu}><a href="#contact" className={activeSection === 'contact' ? 'active' : ''} style={{ '--i': '7' }}>Contact</a></li>
-                    <li onClick={closeMenu} className="cart"><a href="#cart" className={activeSection === 'cart' ? 'active' : ''} style={{ '--i': '4' }}><i class='bx bxs-cart' style={{ fontSize: '23px' }}></i></a></li>
+                    <li onClick={closeMenu}><a href="#testimonies" className={activeSection === 'testimonies' ? 'active' : ''} style={{ '--i': '4' }}>Reviews</a></li>
+                    <li onClick={closeMenu}><a href="#contact" className={activeSection === 'contact' ? 'active' : ''} style={{ '--i': '5' }}>Contact</a></li>
+                    <li onClick={closeMenu} className="cart"><a href="#cart" className={activeSection === 'cart' ? 'active' : ''} style={{ '--i': '6' }}><i class='bx bxs-cart' style={{ fontSize: '23px' }}></i></a></li>
                 </ul>
                 <div id="menu-icon" className={`bx ${isOpen ? 'bx-x' : 'bx-menu'}`} onClick={toggleMenu}></div>
             </header>
@@ -112,7 +112,7 @@ const Home = () => {
                     <h4>Lead Supercell</h4>
                     <h1>GUNBLADE</h1>
                     <p>Join millions of gamers as they explore gaming tools and feel confident while gaming!.</p>
-                    <a href="#">Explore</a>
+                    <a href="#explore">Explore</a>
                     <a href="#" className="ctaa"><i className='bx bx-play'></i>Watch Triller</a>
                 </div>
 
@@ -128,8 +128,105 @@ const Home = () => {
             </div>
 
             <div className="scroll-down">
-                <a href="#"><i className='bx bx-chevrons-down'></i></a>
+                <a href="#explore"><i className='bx bx-chevrons-down'></i></a>
             </div>
+
+            <section className="logo-section" id="explore">
+                <i className="fas fa-gamepad"></i>
+                <h1>The Gamer's Zone</h1>
+            </section>
+
+            {/* -----------------------explore section--------------- */}
+
+            <section className="explore" id="explore">
+                <div className="wrapper1">
+                    <h1>Gaming Tools</h1>
+                    <br></br>
+                    <div className="explore-1-img">
+                        <a href="#"><div className="img img-1"></div></a>
+                        <a href="#"><div className="img img-2"></div></a>
+                        <a href="#"><div className="img img-3"></div></a>
+                        <a href="#"><div className="img img-4"></div></a>
+                        <a href="#"><div className="img img-5"></div></a>
+                        <a href="#"><div className="img img-6"></div></a>
+                        <a href="#"><div className="img img-7"></div></a>
+                        <a href="#"><div className="img img-8"></div></a>
+                    </div>
+                </div>
+
+                <div className="game-categories">
+                    <h1>GAME CATEGORIES</h1>
+                    <div className="game-wrapper">
+                        <a href="#"><div className="gw gw-1"></div></a>
+                        <a href="#"><div className="gw gw-2"></div></a>
+                        <a href="#"><div className="gw gw-3"></div></a>
+                        <a href="#"><div className="gw gw-4"></div></a>
+                        <a href="#"><div className="gw gw-5"></div></a>
+                    </div>
+                </div>
+
+                <div className="game-categories left">
+                    <div className="game-wrapper">
+                        <a href="#"><div className="gw gw-6"></div></a>
+                        <a href="#"><div className="gw gw-7"></div></a>
+                        <a href="#"><div className="gw gw-8"></div></a>
+                        <a href="#"><div className="gw gw-9"></div></a>
+                        <a href="#"><div className="gw gw-10"></div></a>
+                    </div>
+                </div>
+            </section>
+
+            <section className="explore-2">
+                <h1>Popular Stars</h1>
+                <div className="players">
+                    <div className="p-image p-image-1"></div>
+                    <span>Valentino Rossi</span>
+                    <div className="stars">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div className="players">
+                    <div className="p-image p-image-2"></div>
+                    <span>Anthony Joshua</span>
+                    <div className="stars">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div className="players">
+                    <div className="p-image p-image-3"></div>
+                    <span>Tyler Pharris</span>
+                    <div className="stars">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div className="players">
+                    <div className="p-image p-image-4"></div>
+                    <span>Quadri Aruna</span>
+                    <div className="stars">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </section>
+
 
         </div>
     );
