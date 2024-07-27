@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import '../Styles/arena.css';
 import '../index.css';
 import pic from '../assets/Logoalts.png';
-import home from '../assets/arenaGraphics.png'
+import home from '../assets/arenaGraphics.png';
+import about from '../assets/aboutImg.png';
 import ScrollReveal from "scrollreveal";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
+
 const Home = () => {
+
 
     const [activeSection, setActiveSection] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +30,7 @@ const Home = () => {
 
     // -------------------------------active scroll sections-------------------------------
 
-    const sectionIds = ['home'];
+    const sectionIds = ['home', 'about'];
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY + 97;
@@ -75,6 +78,18 @@ const Home = () => {
         sr.reveal(".hero-img", { delay: 450, origin: 'top' });
     }, []);
 
+    useEffect(() => {
+
+        const hr = ScrollReveal({
+            distance: '65px',
+            duration: 2600,
+            delay: 450,
+            reset: true
+        });
+        hr.reveal(".about-text", { delay: 200, origin: 'top' })
+        hr.reveal(".about-img", { delay: 450, origin: 'top' });
+    }, []);
+
     //------------------------------------paralax---------------------------- //
 
     const [showContent, setShowContent] = useState(false);
@@ -117,7 +132,7 @@ const Home = () => {
                 </div>
 
                 <div className="hero-img">
-                    <img src={home}></img>
+                    <img src={home} alt="Logo"></img>
                 </div>
             </section>
 
@@ -143,7 +158,7 @@ const Home = () => {
                     <h1>Gaming Tools</h1>
                     <br></br>
                     <div className="explore-1-img">
-                        <a href="#"><div className="img img-1"></div></a>
+                        <a href="cart"><div className="img img-1"></div></a>
                         <a href="#"><div className="img img-2"></div></a>
                         <a href="#"><div className="img img-3"></div></a>
                         <a href="#"><div className="img img-4"></div></a>
@@ -157,21 +172,21 @@ const Home = () => {
                 <div className="game-categories">
                     <h1>GAME CATEGORIES</h1>
                     <div className="game-wrapper">
-                        <a href="#"><div className="gw gw-1"></div></a>
-                        <a href="#"><div className="gw gw-2"></div></a>
-                        <a href="#"><div className="gw gw-3"></div></a>
-                        <a href="#"><div className="gw gw-4"></div></a>
-                        <a href="#"><div className="gw gw-5"></div></a>
+                        <a href="shop"><div className="gw gw-1"></div></a>
+                        <a href="shop"><div className="gw gw-2"></div></a>
+                        <a href="shop"><div className="gw gw-3"></div></a>
+                        <a href="shop"><div className="gw gw-4"></div></a>
+                        <a href="shop"><div className="gw gw-5"></div></a>
                     </div>
                 </div>
 
                 <div className="game-categories left">
                     <div className="game-wrapper">
-                        <a href="#"><div className="gw gw-6"></div></a>
-                        <a href="#"><div className="gw gw-7"></div></a>
-                        <a href="#"><div className="gw gw-8"></div></a>
-                        <a href="#"><div className="gw gw-9"></div></a>
-                        <a href="#"><div className="gw gw-10"></div></a>
+                        <a href="shop"><div className="gw gw-6"></div></a>
+                        <a href="shop"><div className="gw gw-7"></div></a>
+                        <a href="shop"><div className="gw gw-8"></div></a>
+                        <a href="shop"><div className="gw gw-9"></div></a>
+                        <a href="shop"><div className="gw gw-10"></div></a>
                     </div>
                 </div>
             </section>
@@ -227,6 +242,22 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* --------------------------------about section---------------- */}
+
+            <section className="about" id="about">
+                <div className="about-img">
+                    <img src={about} alt="logo"></img>
+                </div>
+
+                <div className="about-text">
+                    <span>About Us</span>
+                    <h2>Fuel Your Game <br /> Elevate Your Fun </h2>
+                    <p>At <cite>ARENA</cite> we'er passionate about gaming. We're gamers, just like You.
+                        Our mission is to connect you with the best gear, expert advice, and a community that shares your passion.
+                        Trust us to elevate your gaming experience</p>
+                    <a href="shop" id="shop" className="ctaa"><i class='bx bx-chevrons-right'></i>Shop</a>
+                </div>
+            </section>
 
         </div>
     );
